@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TimeTable</title>
+    <script src="timetable.js"></script>
+<style>
+    /* Button used to open the contact form - fixed at the bottom of the page */
+table,th,tr,td{
+    padding: 20px;
+}
+.form-popup {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  border:2px solid;
+  
+}
+/* .form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+} */
+
+</style> 
+</head>
+
+<body>
+    <div id = "drop">
+        <button onclick=showTable();>Display</button>
+    </div>
+    
+    <div class="form-popup" id="myForm">
+        
+          <h4>Details</h4>
+            
+          <select id="sub"  onclick=openForm();>
+            <option value="" >--Subject--</option>
+            <option value='Physics'>Physics</option>
+            <option value='Maths'>Maths</option>
+            <option value="Chemistry">Chemistry</option>
+        </select>
+
+        <select id="teacher" >
+            
+        </select>
+          
+            
+      
+          <button onclick=saveDetails()>Save</button>
+          <button  onclick = closeForm();>Close</button>
+        
+      </div>
+      
+       
+
+    <div id = "table">
+        <table >
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
